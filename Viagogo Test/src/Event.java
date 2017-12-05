@@ -5,6 +5,15 @@
 public class Event 
 {
 private int numberofTickets;
+private int eventNumber;
+public int getEventNumber() 
+{
+	return eventNumber;
+}
+public void setEventNumber(int eventNumber) 
+{
+	this.eventNumber = eventNumber;
+}
 public int getNumberofTickets() 
 {
 	return numberofTickets;
