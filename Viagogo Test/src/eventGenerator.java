@@ -61,7 +61,7 @@ public class eventGenerator
 	       {
 	           for(int j=0;j<21;j++)
 	           {
-	               System.out.print(eventArray[i][j].getNumberofTickets()+ "\t");
+	               System.out.print(eventArray[i][j].getEventNumber()+ "\t");
 	           }
 	           System.out.println();
 	       }
@@ -79,7 +79,7 @@ public class eventGenerator
 		if(eventArray[x][y].getEventNumber()!=0)
 		{
 			NearestEvent[i]=eventArray[x][y];
-			System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t"+NearestEvent[i].getXcordinate()+"\t is at"+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y));
+			System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y));
 			i++;
 		}
 			while(i<5)
@@ -88,28 +88,28 @@ public class eventGenerator
 			if(eventArray[x+plusx][y].getEventNumber()!=0)
 			{
 				NearestEvent[i]=eventArray[x][y+plusy];
-				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t"+NearestEvent[i].getXcordinate()+"\t is at"+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x+plusx, y));
+				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x+plusx, y));
 				i++;
 			}}
 			if((y+plusy)<=20){ 
 				if(eventArray[x][y+plusy].getEventNumber()!=0)
 				{
 				NearestEvent[i]=eventArray[x][y+plusy];
-				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t"+NearestEvent[i].getXcordinate()+"\t is at"+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y+plusy));
+				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y+plusy));
 				i++;
 				}}
 			if((y+minusy)>=0){ 
 				if(eventArray[x][y+minusy].getEventNumber()!=0)
 				{
 				NearestEvent[i]=eventArray[x][y+minusy];
-				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t"+NearestEvent[i].getXcordinate()+"\t is at"+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y+minusy));
+				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y+minusy));
 				i++;
 				}}
 			if((x+minusx)>=0){
 				if(eventArray[x+minusx][y].getEventNumber()!=0)
 				{
 					NearestEvent[i]=eventArray[x+minusx][y];
-					System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t"+NearestEvent[i].getXcordinate()+"\t is at "+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x+minusx, y));
+					System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x+minusx, y));
 					i++;
 				}
 			  }
