@@ -9,6 +9,9 @@ public class Event
 private int numberofTickets;
 private int eventNumber;
 private int Xcordinate;
+private int Ycordinate;
+private double lowestTicketPrice=500.0;
+private ArrayList<Ticket> ticketArray;
 public int getXcordinate() {
 	return Xcordinate;
 }
@@ -21,8 +24,6 @@ public int getYcordinate() {
 public void setYcordinate(int ycordinate) {
 	Ycordinate = ycordinate;
 }
-private int Ycordinate;
-private ArrayList<Ticket> ticketArray;
 public int getEventNumber() 
 {
 	return eventNumber;
@@ -48,6 +49,8 @@ public Event(int number)
 	{
 		Ticket ticket=new Ticket();
 		ticketArray.add(ticket);
+		if(lowestTicketPrice<ticketArray.get(i).getTicketPrice())
+		lowestTicketPrice=ticketArray.get(i).getTicketPrice();
 	}
 }
 public Event() 
