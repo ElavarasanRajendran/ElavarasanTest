@@ -86,7 +86,7 @@ public class eventGenerator
 			while(found!=true)
 			{
 			if((x+plusx)<=20){
-				System.out.println("hello1");
+				System.out.println(+(x+plusx)+"\t"+(y));
 			if(eventArray[x+plusx][y].getEventNumber()!=0)
 			{
 				NearestEvent[i]=eventArray[x][y+plusy];
@@ -96,8 +96,8 @@ public class eventGenerator
 				plusx+=1;
 				break;
 			}}
-			else if((y+plusy)<=20){ 
-				System.out.println("hello2");
+			if((y+plusy)<=20){ 
+				System.out.println(+(x)+"\t"+(y+plusy));
 				if(eventArray[x][y+plusy].getEventNumber()!=0)
 				{
 				NearestEvent[i]=eventArray[x][y+plusy];
@@ -106,8 +106,8 @@ public class eventGenerator
 				plusy+=1;
 				break;
 				}}
-			else if((y+minusy)>=0){ 
-				System.out.println("hello3");
+			if((y+minusy)>=0){ 
+				System.out.println(+x+"\t"+(y+minusy));
 				if(eventArray[x][y-minusy].getEventNumber()!=0)
 				{
 				NearestEvent[i]=eventArray[x][y+minusy];
@@ -116,9 +116,8 @@ public class eventGenerator
 				minusy-=1;
 				break;
 				}}
-			else if((x+minusx)>=0){
-				System.out.println("hello4");
-				if(eventArray[x-minusx][y].getEventNumber()!=0)
+			if((x+minusx)>=0){
+				if(eventArray[x+minusx][y].getEventNumber()!=0)
 				{
 					NearestEvent[i]=eventArray[x+minusx][y];
 					System.out.println("The nearest Event's ticket price is"+NearestEvent[i].getNumberofTickets()+"\t"+NearestEvent[i].getXcordinate()+"\t"+NearestEvent[i].getYcordinate());
