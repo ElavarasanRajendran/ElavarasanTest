@@ -1,3 +1,6 @@
+import java.util.Map;
+import java.util.*;
+
 /**
  * @author Elavarasan
  *
@@ -6,6 +9,21 @@ public class Event
 {
 private int numberofTickets;
 private int eventNumber;
+private int Xcordinate;
+public int getXcordinate() {
+	return Xcordinate;
+}
+public void setXcordinate(int xcordinate) {
+	Xcordinate = xcordinate;
+}
+public int getYcordinate() {
+	return Ycordinate;
+}
+public void setYcordinate(int ycordinate) {
+	Ycordinate = ycordinate;
+}
+private int Ycordinate;
+private ArrayList<Ticket> ticketArray;
 public int getEventNumber() 
 {
 	return eventNumber;
@@ -22,12 +40,21 @@ public void setNumberofTickets(int numberofTickets)
 {
 	this.numberofTickets = numberofTickets;
 }
-public Event()
+public Event(int number)
 {
 	RandomNumberGeneration rand=new RandomNumberGeneration();
-	Ticket ticket=new Ticket();
-	this.setNumberofTickets((int) rand.randomNumberGenerationMethod(1, 500));
-	System.out.println("The number of tickets are"+this.getNumberofTickets());
-	System.out.println("The Price of Each Ticket is"+ticket.getTicketPrice());
+	this.setNumberofTickets(number);
+	ticketArray=new ArrayList(this.getNumberofTickets());
+	for(int i=0;i<this.getNumberofTickets();i++)
+	{
+		Ticket ticket=new Ticket();
+		ticketArray.add(ticket);
+	}
+}
+public Event() 
+{
+	eventNumber=0;
+	numberofTickets=0;
+	// TODO Auto-generated constructor stub
 }
 }
