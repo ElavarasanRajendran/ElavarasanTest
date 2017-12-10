@@ -11,6 +11,12 @@ private int eventNumber;
 private int Xcordinate;
 private int Ycordinate;
 private double lowestTicketPrice=500.0;
+public double getLowestTicketPrice() {
+	return lowestTicketPrice;
+}
+public void setLowestTicketPrice(double lowestTicketPrice) {
+	this.lowestTicketPrice = lowestTicketPrice;
+}
 private ArrayList<Ticket> ticketArray;
 public int getXcordinate() {
 	return Xcordinate;
@@ -42,14 +48,13 @@ public void setNumberofTickets(int numberofTickets)
 }
 public Event(int number)
 {
-	RandomNumberGeneration rand=new RandomNumberGeneration();
 	this.setNumberofTickets(number);
 	ticketArray=new ArrayList(this.getNumberofTickets());
 	for(int i=0;i<this.getNumberofTickets();i++)
 	{
 		Ticket ticket=new Ticket();
 		ticketArray.add(ticket);
-		if(lowestTicketPrice<ticketArray.get(i).getTicketPrice())
+		if(lowestTicketPrice>ticketArray.get(i).getTicketPrice())
 		lowestTicketPrice=ticketArray.get(i).getTicketPrice();
 	}
 }

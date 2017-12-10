@@ -1,5 +1,8 @@
 import java.util.Scanner;
-
+/**
+ * @author Elavarasan
+ *
+ */
 public class demoClass {
 
 	public static void main(String[] args) 
@@ -13,7 +16,7 @@ public class demoClass {
 		Scanner sc=new Scanner(System.in);
 		xcord=sc.nextInt();
 		ycord=sc.nextInt();
-		/*if((xcord>10)||(xcord<-10))
+		if((xcord>10)||(xcord<-10))
 		{
 			System.out.println("Invalid X co ordinates Input");
 			System.exit(1);
@@ -22,7 +25,8 @@ public class demoClass {
 		{
 			System.out.println("Invalid Y co ordinates Input");
 		System.exit(1);
-		}*/
-		event.searchNearestEvent(xcord,ycord);
+		}
+		event.searchNearestEvent(xcord+10,ycord+10);
+		sc.close();
 	}
 }

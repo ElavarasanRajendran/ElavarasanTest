@@ -17,6 +17,5 @@ public Ticket()
 {
 	RandomNumberGeneration rand=new RandomNumberGeneration();
 	this.setTicketPrice(rand.randomNumberGenerationMethod(1.00, 500.0));
-	//System.out.println("The Price of the ticket is"+ticketPrice);
 }
 }

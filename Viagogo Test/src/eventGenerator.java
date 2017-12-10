@@ -1,13 +1,10 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * @author Elavarasan
  *
  */
 public class eventGenerator
 {
-	private static int numberOfEvents;
+	private int numberOfEvents;
 	private Event eventArray[][]=new Event[21][21];
 	public int getNumberOfEvents() 
 	{
@@ -65,8 +62,8 @@ public class eventGenerator
 	           }
 	           System.out.println();
 	       }
-		
 	}
+
 	public void searchNearestEvent(int xcord,int ycord)
 	{
 		Event NearestEvent[]=new Event[5];
@@ -79,7 +76,7 @@ public class eventGenerator
 		if(eventArray[x][y].getEventNumber()!=0)
 		{
 			NearestEvent[i]=eventArray[x][y];
-			System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y));
+			System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+" is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user's location is"+calculatedistance(xcord, ycord, x, y) + "The lowest ticket price in the event is "+NearestEvent[i].getLowestTicketPrice());
 			i++;
 		}
 			while(i<5)
@@ -88,28 +85,28 @@ public class eventGenerator
 			if(eventArray[x+plusx][y].getEventNumber()!=0)
 			{
 				NearestEvent[i]=eventArray[x][y+plusy];
-				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x+plusx, y));
+				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user's location is"+calculatedistance(xcord, ycord, x+plusx, y) + "The lowest ticket price in the event is "+NearestEvent[i].getLowestTicketPrice());
 				i++;
 			}}
 			if((y+plusy)<=20){ 
 				if(eventArray[x][y+plusy].getEventNumber()!=0)
 				{
 				NearestEvent[i]=eventArray[x][y+plusy];
-				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y+plusy));
+				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user's location is"+calculatedistance(xcord, ycord, x, y+plusy) + "The lowest ticket price in the event is "+NearestEvent[i].getLowestTicketPrice());
 				i++;
 				}}
 			if((y+minusy)>=0){ 
 				if(eventArray[x][y+minusy].getEventNumber()!=0)
 				{
 				NearestEvent[i]=eventArray[x][y+minusy];
-				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x, y+minusy));
+				System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user's location is"+calculatedistance(xcord, ycord, x, y+minusy) + "The lowest ticket price in the event is "+NearestEvent[i].getLowestTicketPrice());
 				i++;
 				}}
 			if((x+minusx)>=0){
 				if(eventArray[x+minusx][y].getEventNumber()!=0)
 				{
 					NearestEvent[i]=eventArray[x+minusx][y];
-					System.out.println("The nearest Event Number is"+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user location is"+calculatedistance(xcord, ycord, x+minusx, y));
+					System.out.println("The nearest Event Number is  "+NearestEvent[i].getEventNumber()+"\t is at "+NearestEvent[i].getXcordinate()+","+NearestEvent[i].getYcordinate()+"\t The distance from the user's location is"+calculatedistance(xcord, ycord, x+minusx, y)+ "The lowest ticket price in the event is "+NearestEvent[i].getLowestTicketPrice());
 					i++;
 				}
 			  }
