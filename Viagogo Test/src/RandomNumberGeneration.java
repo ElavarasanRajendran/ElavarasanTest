@@ -2,7 +2,7 @@
  * @author Elavarasan
  *
  */
-public class RandomNumberGeneration 
+public class RandomNumberGeneration 		//Class to generate random Numbers
 {
 	public double randomNumberGenerationMethod(double minimumValue,double maximumValue)
 	{
