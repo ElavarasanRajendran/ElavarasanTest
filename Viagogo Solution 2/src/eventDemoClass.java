@@ -3,7 +3,7 @@ import java.util.Scanner;
  * @author Elavarasan
  *
  */
-public class demoClass			//Demo class to stimulate the overall program 
+public class eventDemoClass			//Demo class to stimulate the overall program 
 {
 
 	public static void main(String[] args) 
@@ -27,8 +27,8 @@ public class demoClass			//Demo class to stimulate the overall program
 			System.out.println("Invalid Y co ordinates Input");
 		System.exit(1);
 		}
-		e.searchNearestEvent(xcord, ycord);
-		e.printNreatestDistances();
+		e.calculateDistance(xcord, ycord);
+		e.printnearestevent();
 		sc.close();
 	}
 }
