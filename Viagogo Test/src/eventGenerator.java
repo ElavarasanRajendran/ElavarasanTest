@@ -586,7 +586,15 @@ public class eventGenerator
 			System.out.println("The event number is"+e.getEventNumber());
 			System.out.println("The event is at x="+(e.getXcordinate()-10)+" and y="+(e.getYcordinate()-10));
 			System.out.println("The distance from the user location is"+calculatedistance(userXLocation, userYLocation, e.getXcordinate(), e.getYcordinate()));
+			System.out.println("the Number of tickets in the events are"+e.getNumberofTickets());
+			if(e.getNumberofTickets()!=0)
+			{
 			System.out.println("The lowest ticket price in the event is "+e.getLowestTicketPrice()+"USD");
+			}
+			else
+			{
+				System.out.println("The tickets are sold out");
+			}
 			System.out.println();
 		}
 	}
